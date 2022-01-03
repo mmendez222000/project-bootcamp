@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default function Basket(props){
-    //console.log(props);
+const Basket = (props) => {
+    
     const {cartItems, onAdd, onRemove} = props;
     const itemsPrice = cartItems.reduce((a,b)=> a + b.price * b.qty, 0 );
     const taxPrice = itemsPrice / 1.12 * 0.12;
@@ -61,4 +61,4 @@ export default function Basket(props){
         )}
     </aside>;
 }
-
+export default Basket;

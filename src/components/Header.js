@@ -3,7 +3,7 @@ import carretilla from './carretilla.png';
 
 console.log(carretilla);
 
-export default function Header(props){
+const Header = (props) => {
     const {countCartItems} = props;
     return (
         <header className='row block text-right'>
@@ -22,3 +22,5 @@ export default function Header(props){
         </header>
     );
 }
+
+export default Header;
