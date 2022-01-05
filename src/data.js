@@ -4,7 +4,7 @@ const data = {
             id: '1',
             name: 'Macbook',
             price: 1400,
-            image: 'https://picsum.photos/id/180/2400/1600',
+            image: 'https://picsum.photos/id/108/4400/2656',
         },
         {
             id: '2',

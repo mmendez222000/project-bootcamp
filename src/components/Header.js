@@ -1,7 +1,5 @@
 import React from 'react';
-import carretilla from './carretilla.png';
 
-console.log(carretilla);
 
 const Header = (props) => {
     const {countCartItems} = props;
