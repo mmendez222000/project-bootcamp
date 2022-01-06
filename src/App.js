@@ -1,7 +1,7 @@
 import Header from './components/Header';
 import Main from './components/Main';
 import Cart from './components/Cart';
-import data from './data';
+import data from './data.json';
 import { useState } from 'react';
 
 const App = () => {
@@ -39,7 +39,8 @@ const App = () => {
       <div className='row'>
         <Main onAdd={onAdd} products={products}></Main>
         <Cart onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}></Cart>
-      </div>
+        <footer className="grid-container"> FILTROS PARA AIRE 2022 </footer>          
+      </div>      
     </div>
   );
 }

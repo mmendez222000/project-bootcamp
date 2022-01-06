@@ -33,7 +33,6 @@ a{
   flex: 3;
 }
 .block{
-  /*background-color: #e0e0e0;*/
   padding: 1rem;
   margin: 0.5rem;
   border-radius: 00.5rem;
@@ -45,7 +44,7 @@ img.small{
   max-height: 9rem;
 }
 img.small-2{
-  max-height: 12rem;
+  max-height: 5rem;
 }
 .text-right{
   text-align: right;
@@ -57,3 +56,23 @@ img.small-2{
   width: auto; 
   max-height: 100%; 
  }
+ .grid-container{
+  display: grid;
+  grid-template-areas: 
+  "footer";
+  grid-template-rows: 2rem 1fr 2rem;
+  grid-template-columns: 1fr;
+  height: 100%;
+  text-align: center;
+}
+ footer{
+  grid-area: footer;
+  background-color: #203040;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.color{
+  background-color: #f8f8f8;
+}

@@ -1,0 +1,46 @@
+{
+    "products": [
+      {
+        "id": "1",
+        "image": "/images/filtro1.jpg",
+        "title": "F6 F7 F8 F9 carton",
+        "name": "F6 F7 F8 F9 carton",
+        "price": 229.9
+      },
+      {
+        "id": "2",
+        "image": "/images/filtro2.jpg",
+        "title": "Marco V plastico F8",
+        "name": "Marco V plastico F8",
+        "price": 818.9
+      },
+      {
+        "id": "3",
+        "image": "/images/filtro3.jpg",
+        "title": "G4 Pre Filtro",
+        "name": "G4 Pre Filtro",
+        "price": 140.9
+      },
+      {
+        "id": "4",
+        "image": "/images/filtro4.jpg",
+        "title": "HEPA Mini Pleat Gel",
+        "name": "HEPA Mini Pleat Gel",
+        "price": 725.9
+      },
+      {
+        "id": "5",
+        "image": "/images/filtro5.jpg",
+        "title": "Separador F8",
+        "name": "Separador F8",
+        "price": 910.9
+      },
+      {
+        "id": "6",
+        "image": "/images/filtro6.jpg",
+        "title": "Mini pleat Galva. F8",
+        "name": "Mini pleat Galva. F8",
+        "price": 849.9
+      }
+    ]
+  }
