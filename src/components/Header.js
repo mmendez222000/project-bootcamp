@@ -1,12 +1,11 @@
 import React from 'react';
-import { BsFillCartFill } from "react-icons/bs";
 import { BsCart } from "react-icons/bs";
 
 const Header = (props) => {
     const {countCartItems} = props;
     return (
         <header className='color row block'>
-            <div className='text-center'><h1>Filtros Para Aire</h1></div>
+            <h1 className='text-center'>Filtros Para Aire</h1>
             <div className=' text-right'>
                 <a href="#/cart">
                     <BsCart size={70} />
