@@ -10,9 +10,10 @@ POST http://localhost:5000/productos
 Content-Type: application/json
 
 {
-    "nombre": "libro",
-    "cantidad": 3,
-    "precio": 13
+    "image": "/images/filtro1.jpg",
+    "title": "F6 F7 F8 F9 carton",
+    "name": "producto 2",
+    "price": 529.9
 }
 
 ### Modificar Productos
@@ -20,16 +21,17 @@ PUT http://localhost:5000/productos/2
 Content-Type: application/json
 
 {
-    "nombre": "producto 2",
-    "cantidad": 5,
-    "precio": 55
+    "image": "/images/filtro1.jpg",
+    "title": "F6 F7 F8 F9 carton",
+    "name": "producto 2.1",
+    "price": 529.9
 }
 
 ### Eliminar Productos
-DELETE http://localhost:5000/productos/4
+DELETE http://localhost:5000/productos/1
 
 ### Obtener Productos
 GET http://localhost:5000/productos/2
 
 ### Filtrar Productos
-GET http://localhost:5000/productos/?filtro=lib
+GET http://localhost:5000/productos/?filtro=F8

@@ -5,10 +5,11 @@ import cors from "cors";
 let lastId = 1;
 let productos =[
     {
-        "nombre": "producto c",
-        "cantidad": 1,
-        "precio": 15,
-        "codigo": lastId
+        "id": lastId,
+        "image": "/images/filtro1.jpg",
+        "title": "F6 F7 F8 F9 carton",
+        "name": "F6 F7 F8 F9 carton",
+        "price": 229.9
     }
 ];
 
@@ -31,32 +32,32 @@ app.get("/productos", (req,res)=>{
 
 app.post("/productos", (req,res)=>{
     lastId++;
-    const producto = {...req.body, codigo: lastId};
+    const producto = {...req.body, id: lastId};
     productos.push(producto);
     res.status(201);
     res.json(producto);
 });
 
-app.put("/productos/:codigo", (req, res) => {
-    const codigo = parseInt(req.params.codigo, 10);
-    const producto = productos.find(p => p.codigo == codigo)
+app.put("/productos/:id", (req, res) => {
+    const id = parseInt(req.params.id, 10);
+    const producto = productos.find(p => p.id == id)
     if(!producto){
         res.status(404);
-        res.json({ mensaje: "No existe ningun producto con el codigo" + codigo});
+        res.json({ mensaje: "No existe ningun producto con el id" + id});
     }else{
         const index = productos.indexOf(producto);
-        const nuevoProducto = productos[index] = {...req.body, codigo};
+        const nuevoProducto = productos[index] = {...req.body, id};
         res.status(200);
         res.json(nuevoProducto);
     }
 })
 
-app.delete("/productos/:codigo", (req, res) => {
-    const codigo = parseInt(req.params.codigo, 10);
-    const producto = productos.find(p => p.codigo == codigo)
+app.delete("/productos/:id", (req, res) => {
+    const id = parseInt(req.params.id, 10);
+    const producto = productos.find(p => p.id == id)
     if(!producto){
         res.status(404);
-        res.json({ mensaje: "No existe ningun producto con el codigo" + codigo});
+        res.json({ mensaje: "No existe ningun producto con el id" + id});
     }else{
         productos = productos.filter(x => x != producto);
         const index = productos.indexOf(producto);
@@ -66,36 +67,23 @@ app.delete("/productos/:codigo", (req, res) => {
     }
 })
 
-app.get("/productos/:codigo", (req, res) => {
-    const codigo = parseInt(req.params.codigo, 10);
-    const producto = productos.find(p => p.codigo == codigo)
+app.get("/productos/:id", (req, res) => {
+    const id = parseInt(req.params.id, 10);
+    const producto = productos.find(p => p.id == id)
     if(!producto){
         res.status(404);
-        res.json({ mensaje: "No existe ningun producto con el codigo" + codigo});
+        res.json({ mensaje: "No existe ningun producto con el id" + id});
     }else{
         res.status(200);
         res.json(producto);
     }
 })
-//Global
-//app.use(isAuthenticated);
 
 const port = process.argv[2] | process.env.PORT | 5000
 
 app.listen(5000, () =>{
     console.log("servidor express escuchado en el puerto 5000")
 })
-
-/*function isAuthenticated(req, res, next){
-
-    const auth = req.headers.authorization;
-    if(auth == "hola mundo"){
-        next();
-    }else{
-        res.status(401);
-        res.send("Not authorizated");
-    }
-}*/
 
 function logs(req, res, next){
     console.log(`${req.method}: ${req.originalUrl}`);
