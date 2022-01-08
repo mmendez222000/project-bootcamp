@@ -2,7 +2,7 @@ import React from 'react';
 
 const Product = (props) => {
     const {product, onAdd} = props;
-    console.log(props);
+    
     return (
             <label>
                     <img className='small' src={product.image} alt={product.name}></img>&nbsp;&nbsp;&nbsp;&nbsp;

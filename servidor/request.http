@@ -1,0 +1,35 @@
+### Home
+GET http://localhost:5000/
+
+### Obtener Productos
+GET http://localhost:5000/Productos
+
+
+### Crear Productos
+POST http://localhost:5000/productos
+Content-Type: application/json
+
+{
+    "nombre": "libro",
+    "cantidad": 3,
+    "precio": 13
+}
+
+### Modificar Productos
+PUT http://localhost:5000/productos/2
+Content-Type: application/json
+
+{
+    "nombre": "producto 2",
+    "cantidad": 5,
+    "precio": 55
+}
+
+### Eliminar Productos
+DELETE http://localhost:5000/productos/4
+
+### Obtener Productos
+GET http://localhost:5000/productos/2
+
+### Filtrar Productos
+GET http://localhost:5000/productos/?filtro=lib
